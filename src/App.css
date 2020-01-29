@@ -23,7 +23,7 @@
 }
 
 #citySelect {
-  margin: 5px
+  margin-left: 20px;
 }
 
 h1 {
@@ -45,5 +45,4 @@ nav {
   display: flex;
   align-items: center;
   border-bottom: lightgrey solid;
-  justify-content: space-between;
 }

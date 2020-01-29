@@ -2,53 +2,58 @@ import React from 'react';
 import './App.css';
 import eventList from './eventList';
 import SingleEvent from './singleEvent'
-import { Select } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
+import getCityArray from './utils'
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
 
-  let events = eventList.Items
-
-  let cityList={}
-
-  events.forEach(event => {
-    let city=event.VenueCity
-    if (event.VenueCity in cityList) {
-      cityList[city]+=1
+    this.state = {
+      filter: null
     }
-    else {
-      cityList[city]=1
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  render() {
+    let events = eventList.Items
+
+    let cityArray = getCityArray(events)
+
+    if (this.state.filter !== null) {
+      events = events.filter(event => {
+        return event.VenueCity === this.state.filter
+      })
     }
-  })
 
-  let cityArray=[]
+    return (
+      <div className="App">
+        <nav>
+          <h1>Search Results for {events[0].EventName} Tickets</h1>
+          <div id='citySelect'>
+            View Events by City: <Dropdown placeholder='Select A City' options={cityArray} onChange={this.handleChange} />
+          </div>
+        </nav>
+        <main>
+          <div>
+            {events.map(event => {
+              return (
+                <SingleEvent event={event} />
+              )
+            })}
+          </div>
+        </main>
+      </div>
+    );
+  }
 
-  for (let city in cityList) {
-    cityArray.push({
-      key: city,
-      value: city,
-      text: `${city} (${cityList[city]})`
+  handleChange(event, data) {
+    this.setState({
+      filter: data.value
     })
   }
 
-  return (
-    <div className="App">
-      <nav>
-        <h1>Search Results for {events[0].EventName} Tickets</h1>
-        <div id='citySelect'>
-          View Events by City: <Select placeholder='Select A City' options={cityArray}/>
-        </div>
-      </nav>
-      <main>
-        <div>
-          {events.map(event => {
-            return (
-              <SingleEvent event={event}/>
-            )
-          })}
-        </div>
-      </main>
-    </div>
-  );
 }
 
 export default App;
