@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import eventList from './eventlist';
 
 function App() {
+
+  let events = eventList.Items
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload.  Test: {events[0].EventName}
         </p>
         <a
           className="App-link"
