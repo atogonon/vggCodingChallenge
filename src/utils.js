@@ -1,9 +1,9 @@
-const getCityObj = (events) => {
+export const getCityObj = (events) => {
   let cityObj = {}
 
   events.forEach(event => {
     let city = event.VenueCity
-    if (event.VenueCity in cityObj) {
+    if (city in cityObj) {
       cityObj[city] += 1
     }
     else {
@@ -14,7 +14,7 @@ const getCityObj = (events) => {
   return cityObj
 }
 
-const setDropDownOptions = (cityObj) => {
+export const setDropDownOptions = (cityObj) => {
 
   let cityArray = [{
     key: "All",

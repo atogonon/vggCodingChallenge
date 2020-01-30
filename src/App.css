@@ -27,6 +27,8 @@
   border-radius: 5px;
   font-weight: bold;
   margin: 5px;
+  padding: 5px;
+  border: solid grey 1px;
 }
 
 .lastDate {
@@ -34,6 +36,8 @@
   border-radius: 5px;
   font-weight: bold;
   margin: 5px;
+  padding: 5px;
+  border: solid grey 1px;
 }
 
 .cheapestInCity {
@@ -48,10 +52,16 @@
   border-radius: 5px;
   font-weight: bold;
   margin: 5px;
+  padding: 5px;
+  border: solid grey 1px;
 }
 
 #citySelect {
   margin-left: 20px;
+}
+
+a {
+  color: black;
 }
 
 h1 {

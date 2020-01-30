@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import eventList from './eventList';
-import SingleEvent from './singleEvent'
+import SingleEvent from './SingleEvent'
 import { Dropdown } from 'semantic-ui-react'
 import getCityArray from './utils'
 
