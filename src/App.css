@@ -5,7 +5,7 @@
 .singleEvent {
   display: flex;
   flex-direction: row;
-  width: 98%;
+  width: calc(100% - 20px);
   height: 125px;
   align-content: center;
   justify-content: center;
@@ -19,6 +19,34 @@
 
 .singleEventBody {
   width: 60%;
+  margin: 5px;
+}
+
+.fastSelling {
+  background-color: yellow;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.lastDate {
+  background-color: lightskyblue;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.cheapestInCity {
+  color: green;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.soldOut {
+  background-color: red;
+  border-radius: 5px;
+  font-weight: bold;
   margin: 5px;
 }
 

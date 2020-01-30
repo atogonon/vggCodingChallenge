@@ -39,7 +39,7 @@ class App extends React.Component {
           <div>
             {events.map(event => {
               return (
-                <SingleEvent event={event} />
+                <SingleEvent key={event.EventId} event={event} />
               )
             })}
           </div>
