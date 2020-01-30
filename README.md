@@ -10,7 +10,7 @@ Part 3:
 I imagine one reason a customer may not like the current filter is if said customer wants to search cities not on the list.  Maybe the implementation of a manual search filter may work here.  Also, people may want more options to filter by other than just city.  Perhaps they want to filter by date, or by one of the information tags (fast selling, last date, cheapest in city).  This would probably require altering the state in the App component and the .filter method in the render function to take these tags into account.
 
 
-==========================================================================================================================================
+===============================================================================
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
