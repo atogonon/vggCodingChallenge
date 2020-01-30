@@ -32,7 +32,7 @@ class App extends React.Component {
         <nav>
           <h1>Search Results for {events[0].EventName} Tickets</h1>
           <div id='citySelect'>
-            View Events by City: <Dropdown placeholder='Select A City' options={cityArray} onChange={this.handleChange} />
+            View Events by City: <Dropdown placeholder='Select A City' options={cityArray} scrolling={true} onChange={this.handleChange} />
           </div>
         </nav>
         <main>
